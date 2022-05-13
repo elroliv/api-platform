@@ -1,3 +1,6 @@
+.idea
+.DS_Store
+
 /.env
 /helm/api-platform/charts/*
 !/helm/api-platform/charts/.gitignore
