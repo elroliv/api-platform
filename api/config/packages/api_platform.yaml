@@ -14,3 +14,11 @@ api_platform:
         stateless: true
         cache_headers:
             vary: ['Content-Type', 'Authorization', 'Origin']
+
+#App\Entity\Plant:
+#    itemOperations:
+#        get: ~
+#        post_publication:
+#            method: POST
+#            path: /plants/create
+#            controller: App\Controller\CreatePlant

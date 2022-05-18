@@ -1,0 +1,8 @@
+# api/config/api_platform/resources.yaml
+App\Entity\Plant:
+    itemOperations:
+        get: ~
+        post_publication:
+            method: POST
+            path: /plants/create
+            controller: App\Controller\CreatePlant

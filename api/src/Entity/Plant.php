@@ -7,11 +7,11 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * This is a dummy entity. Remove it!
+ * A Plant
  */
 #[ApiResource(mercure: true)]
 #[ORM\Entity]
-class Greeting
+class Plant
 {
     /**
      * The entity ID
@@ -22,14 +22,38 @@ class Greeting
     private ?int $id = null;
 
     /**
-     * A nice person
+     * The entity UUID
+     * label pattern : YYYY_number
+     * YYYY should be acquisition year
+     */
+    #[ORM\Column]
+    private string $uuid = '';
+
+    /**
+     * Plant's variety
      */
     #[ORM\Column]
     #[Assert\NotBlank]
-    public string $name = '';
+    public string $variety = '';
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUuid(): string
+    {
+        return $this->uuid;
+    }
+
+    /**
+     * @param string $uuid
+     */
+    public function setUuid(string $uuid): void
+    {
+        $this->uuid = $uuid;
     }
 }

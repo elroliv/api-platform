@@ -3,9 +3,9 @@
 namespace App\Tests\Api;
 
 use ApiPlatform\Core\Bridge\Symfony\Bundle\Test\ApiTestCase;
-use App\Entity\Greeting;
+use App\Entity\Plant;
 
-class GreetingsTest extends ApiTestCase
+class PlantsTest extends ApiTestCase
 {
     public function testCreateGreeting()
     {

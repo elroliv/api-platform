@@ -2,6 +2,14 @@ version: "3.4"
 
 # Development environment override
 services:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '8899:8080'
+    depends_on:
+      - database
+
   php:
     volumes:
       - ./api:/srv/api:rw,cached
